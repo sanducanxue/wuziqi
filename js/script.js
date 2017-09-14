@@ -167,7 +167,7 @@ var computerAI = function() {
 							myScore[i][j] += 200;
 						} else if(myWin[k] == 2) {
 							myScore[i][j] += 400;
-							for(var z = 0; z < count; z++) {
+							/*for(var z = 0; z < count; z++) {
 								if(wins[i][j][z] && match(k, z) && myWin[z] == 2) {
 									//33连
 
@@ -177,28 +177,29 @@ var computerAI = function() {
 										myScore[i][j] = 10000;
 									}
 								}
-							}
+							}*/
 
 						} else if(myWin[k] == 3) {
 
-							if(hasOtherPoint(k) == 2) {
-								myScore[i][j] += 5000;
-							} else {
-								myScore[i][j] += 20000;
+                            myScore[i][j] += 20000;
+							/*if(hasOtherPoint(k) == 2) {
+							 myScore[i][j] += 5000;
+							 } else {
+							 myScore[i][j] += 20000;
 
-							}
-							for(var z = 0; z < count; z++) {
-								if(wins[i][j][z] && match(k, z) && myWin[z] == 2) {
-									//34连
+							 }
+							 for(var z = 0; z < count; z++) {
+							 if(wins[i][j][z] && match(k, z) && myWin[z] == 2) {
+							 //34连
 
-									if(hasOtherPoint(k) == 2) {
-										myScore[i][j] = 8800;
-									} else {
-										myScore[i][j] = 66000;
+							 if(hasOtherPoint(k) == 2) {
+							 myScore[i][j] = 8800;
+							 } else {
+							 myScore[i][j] = 66000;
 
-									}
-								}
-							}
+							 }
+							 }
+							 }*/
 
 						} else if(myWin[k] == 4) {
 							myScore[i][j] += 90000;
@@ -208,7 +209,7 @@ var computerAI = function() {
 							computerScore[i][j] += 220;
 						} else if(computerWin[k] == 2) {
 							computerScore[i][j] += 440;
-							for(var z = 0; z < count; z++) {
+							/*for(var z = 0; z < count; z++) {
 								if(wins[i][j][z] && match(k, z) && computerWin[z] == 2) {
 									//33连
 									if(hasOtherPoint(k) == 1) {
@@ -218,10 +219,11 @@ var computerAI = function() {
 									}
 
 								}
-							}
+							}*/
 
 						} else if(computerWin[k] == 3) {
-							if(hasOtherPoint(k) == 1) {
+                            computerScore[i][j] += 22000;
+							/*if(hasOtherPoint(k) == 1) {
 								computerScore[i][j] += 5500;
 							} else {
 								computerScore[i][j] += 22000;
@@ -240,7 +242,7 @@ var computerAI = function() {
 
 								}
 							}
-
+*/
 						} else if(computerWin[k] == 4) {
 							computerScore[i][j] += 99000;
 						}
